@@ -11,7 +11,7 @@
       },
       {
         "src": "myfrontend/package.json",
-        "use": "@vercel/react",
+        "use": "@vercel/static-build",
         "config": {
           "buildCommand": "npm install && npm run build",
           "outputDir": "build" 
