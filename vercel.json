@@ -1,22 +1,21 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "matha/wsgi.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxLambdaSize": "60xmb",
-          "runtime": "python3.9"
-        }
-      },
-      {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "buildCommand": "npm install && npm run build",
-          "outputDir": "build" 
-        }
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "manage.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "src",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "manage.py/$1" },
+    { "src": "/(.*)", "dest": "src/$1" }
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "matha.settings.production",
+    "VERCEL": "true"
   }
-  
+}
