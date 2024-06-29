@@ -82,11 +82,15 @@ WSGI_APPLICATION = 'matha.wsgi.app'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse("postgres://santhamathalivedb_user:NRoQwN9fkuBZ9N87jJe4nX0XIsFsLXpA@dpg-cpcmk9kf7o1s73fqugn0-a.oregon-postgres.render.com/santhamathalivedb")
 }
 
 
