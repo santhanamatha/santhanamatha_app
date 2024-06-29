@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'matha.wsgi.application'
+WSGI_APPLICATION = 'matha.wsgi.app'
 
 
 # Database
