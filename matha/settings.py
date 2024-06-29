@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1%c%v9x%xyw$jdq_z0r1#3o)spt(b2q(n5ng=7=$!0al0^_k25
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'matha.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'myfrontend', 'build')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +126,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'myfrontend', 'build',)
+    os.path.join(BASE_DIR)
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
