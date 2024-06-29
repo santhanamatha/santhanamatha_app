@@ -1,21 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "matha/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "60xmb",
-        "runtime": "python3.9"
+    "version": 2,
+    "builds": [
+      {
+        "src": "matha/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "60xmb",
+          "runtime": "python3.9"
+        }
       }
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "npm install && npm run build",
-        "outputDir": "build" 
-      }
-    }
-  ]
-}
+    ]
+  }
+  
