@@ -10,10 +10,10 @@
         }
       },
       {
-        "src": "myfrontend/package.json",
+        "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
-          "buildCommand": "npm start",
+          "buildCommand": "npm run build",
           "outputDir": "build" 
         }
       }
