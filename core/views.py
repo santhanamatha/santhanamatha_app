@@ -1,10 +1,18 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
+from django.http.response import HttpResponse
+from django.views import View
 from .models import *
 from .serializers import *
 from datetime import datetime, timedelta
 
+
+class HomeView(View):
+
+    def get(self, request):
+        return HttpResponse('<h1>Hello World</h1>')
+    
 
 class NotificationAPIView(APIView):
     def get(self, request):
