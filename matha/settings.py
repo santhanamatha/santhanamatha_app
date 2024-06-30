@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'matha.wsgi.app'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse("postgres://santhamathalivedb_user:NRoQwN9fkuBZ9N87jJe4nX0XIsFsLXpA@dpg-cpcmk9kf7o1s73fqugn0-a.oregon-postgres.render.com/santhamathalivedb")
+    'default': dj_database_url.parse("postgresql://santhamathalivedb_ulnm_user:EeaZl4kn9cNUcd9umDPXAZNt1WuYtJwn@dpg-cq0le8aju9rs73av4p50-a.singapore-postgres.render.com/santhamathalivedb_ulnm")
 }
 
 
