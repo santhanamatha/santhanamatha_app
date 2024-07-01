@@ -159,5 +159,6 @@ CLOUDINARY_STORAGE = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = (
     'https://santhamathagn.in/',
-    'https://santhanamatha.vercel.app/'
+    'https://santhanamatha.vercel.app/',
+    'https://reactapp-a6gh.onrender.com/'
 )
